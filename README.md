@@ -30,15 +30,15 @@ ShadowsocksR多用户管理脚本（基于官方mujson版本）
 
 ## 安装 ##
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/thomas0612/SSR-Bash-Python/master/install.sh && bash install.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/BoomCloud-HK/express/master/install.sh && bash install.sh
 ```
 
 ## 卸载 ##
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/thomas0612/SSR-Bash-Python/master/uninstall.sh && bash uninstall.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/BoomCloud-HK/express/master/uninstall.sh && bash uninstall.sh
 ```
     
 ## 自检 ##
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/thomas0612/SSR-Bash-Python/master/self-check.sh && bash self-check.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/BoomCloud-HK/express/master/self-check.sh && bash self-check.sh
 ```
