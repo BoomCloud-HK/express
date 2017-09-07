@@ -59,15 +59,15 @@ fi
 
 #Install SSR and SSR-Bash
 cd /usr/local
-git clone https://github.com/dinsblog/shadowsocksr.git
-git clone https://github.com/aihoom/SSR-Bash-Python.git
+git clone https://github.com/BoomCloud-HK/shadowsocksr.git
+git clone https://github.com/BoomCloud-HK/express.git
 cd /usr/local/shadowsocksr
 bash initcfg.sh
 
 #Install Libsodium
 cd $workdir
-export LIBSODIUM_VER=1.0.11
-wget https://github.com/jedisct1/libsodium/releases/download/1.0.11/libsodium-$LIBSODIUM_VER.tar.gz
+export LIBSODIUM_VER=1.0.13
+wget https://github.com/jedisct1/libsodium/releases/download/1.0.13/libsodium-$LIBSODIUM_VER.tar.gz
 tar xvf libsodium-$LIBSODIUM_VER.tar.gz
 pushd libsodium-$LIBSODIUM_VER
 ./configure --prefix=/usr && make
@@ -139,7 +139,7 @@ systemctl enable iptables.service
 fi
 
 #Install SSR-Bash Background
-wget -N --no-check-certificate -O /usr/local/bin/ssr https://raw.githubusercontent.com/aihoom/SSR-Bash-Python/master/ssr
+wget -N --no-check-certificate -O /usr/local/bin/ssr https://raw.githubusercontent.com/BoomCloud-HK/express/master/ssr
 chmod +x /usr/local/bin/ssr
 
 #Modify ShadowsocksR API
@@ -150,4 +150,6 @@ sed -i "s/SERVER_PUB_ADDR = '127.0.0.1'/SERVER_PUB_ADDR = '$(wget -qO- -t1 -T2 i
 chmod +x -R /usr/local/SSR-Bash-Python/www/cgi-bin
 bash /usr/local/SSR-Bash-Python/self-check.sh
 echo '安装完成！输入 ssr 即可使用本程序~'
-echo 'Telegram Group: https://t.me/AihoomKb'
+echo 'Telegram Group: https://t.me/boomcloud'
+echo 'by BoomCloud'
+echo 'https://www.boomssr.com'
