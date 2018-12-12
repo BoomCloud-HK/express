@@ -11,7 +11,7 @@ echo "############Filelist of /usr/local" >> /root/report.json
 cd /usr/local
 ls >> /root/report.json
 #List /usr/local/ssr-bash-python
-echo "############Filelist of /usr/local/SSR-Bash-Python" >> /root/report.json
+echo "############Filelist of /usr/local/express" >> /root/report.json
 cd /usr/local/SSR-Bash-Python
 ls >> /root/report.json
 #List /usr/local/shadowsockr
@@ -25,7 +25,7 @@ if [ ! -f "/usr/local/bin/ssr" ]; then
   echo "SSR Miss" >> /root/report.json
   exit
 fi
-if [ ! -f "/usr/local/SSR-Bash-Python/server.sh" ]; then
+if [ ! -f "/usr/local/express/server.sh" ]; then
   echo "SSR-Bash-Python主文件缺失，请确认服务器是否成功连接至Github"
   echo "SSR Miss" >> /root/report.json
   exit
