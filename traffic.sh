@@ -20,9 +20,9 @@ while :; do echo
 done
 
 if [[ $tc == 1 ]];then
-	python /usr/local/SSR-Bash-Python/show_flow.py
+	python /usr/local/express/show_flow.py
 	echo ""
-	bash /usr/local/SSR-Bash-Python/traffic.sh
+	bash /usr/local/express/traffic.sh
 fi
 
 if [[ $tc == 2 ]];then
