@@ -10,9 +10,11 @@ echo "##################################
 echo "############Filelist of /usr/local" >> /root/report.json
 cd /usr/local
 ls >> /root/report.json
+
 #List /usr/local/express
 echo "############Filelist of /usr/local/express" >> /root/report.json
 cd /usr/local/express
+
 ls >> /root/report.json
 #List /usr/local/shadowsockr
 echo "############Filelist of /usr/local/shadowsockr" >> /root/report.json
