@@ -52,7 +52,7 @@ if [[ $tc == 2 ]];then
 		echo "已清空端口号为${uid} 的用户流量"
 	fi
 	echo ""
-	bash /usr/local/SSR-Bash-Python/traffic.sh
+	bash /usr/local/express/traffic.sh
 fi
 
 if [[ $tc == 3 ]];then
@@ -61,6 +61,6 @@ if [[ $tc == 3 ]];then
 	echo "已清空全部用户的流量使用记录"
 
 	echo ""
-	bash /usr/local/SSR-Bash-Python/traffic.sh
+	bash /usr/local/express/traffic.sh
 fi
 
