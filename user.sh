@@ -23,21 +23,21 @@ while :; do echo
 done
 
 if [[ $userc == 1 ]];then
-	bash /usr/local/SSR-Bash-Python/user/add.sh
+	bash /usr/local/express/user/add.sh
 	echo ""
-	bash /usr/local/SSR-Bash-Python/user.sh
+	bash /usr/local/express/user.sh
 fi
 
 if [[ $userc == 2 ]];then
-	bash /usr/local/SSR-Bash-Python/user/del.sh
+	bash /usr/local/express/user/del.sh
 	echo ""
-	bash /usr/local/SSR-Bash-Python/user.sh
+	bash /usr/local/express/user.sh
 fi
 
 if [[ $userc == 3 ]];then
-	bash /usr/local/SSR-Bash-Python/user/edit.sh
+	bash /usr/local/express/user/edit.sh
 	echo ""
-	bash /usr/local/SSR-Bash-Python/user.sh
+	bash /usr/local/express/user.sh
 fi
 
 if [[ $userc == 4 ]];then
@@ -63,11 +63,11 @@ if [[ $userc == 4 ]];then
 		python mujson_mgr.py -l -p $uid
 	fi
 	echo ""
-	bash /usr/local/SSR-Bash-Python/user.sh
+	bash /usr/local/express/user.sh
 fi
 
 if [[ $userc == 5 ]];then
-	python /usr/local/SSR-Bash-Python/user/show_all_user_info.py
+	python /usr/local/express/user/show_all_user_info.py
 	echo ""
-	bash /usr/local/SSR-Bash-Python/user.sh
+	bash /usr/local/express/user.sh
 fi

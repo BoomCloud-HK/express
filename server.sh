@@ -59,14 +59,14 @@ if [[ $serverc == 1 ]];then
 	clear
 	echo "ShadowsocksR服务器已启动"
 	echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 2 ]];then
 	bash /usr/local/shadowsocksr/stop.sh
 	echo "ShadowsocksR服务器已停止"
 	echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 3 ]];then
@@ -76,7 +76,7 @@ if [[ $serverc == 3 ]];then
 	clear
 	echo "ShadowsocksR服务器已重启"
 	echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 4 ]];then
@@ -85,7 +85,7 @@ fi
 
 if [[ $serverc == 5 ]];then
 	ps aux|grep server.py
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 6 ]];then
@@ -95,7 +95,7 @@ if [[ $serverc == 6 ]];then
 	echo "nameserver $ifdns2" >> /etc/resolv.conf
 	echo "DNS 服务器已设置为  $ifdns1 $ifdns2"
 	echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 7 ]];then
@@ -132,11 +132,11 @@ if [[ $serverc == 7 ]];then
 	#Get IP
 	ip=`curl -m 10 -s http://members.3322.org/dyndns/getip`
 	clear
-	cd /usr/local/SSR-Bash-Python/www
+	cd /usr/local/express/www
 	screen -dmS webcgi python -m CGIHTTPServer $cgiport
 	echo "WEB服务启动成功，请访问 http://${ip}:$cgiport"
 	echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 8 ]];then
@@ -146,7 +146,7 @@ if [[ $serverc == 8 ]];then
 	clear
 	echo "WEB服务已关闭！"
 	echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
 if [[ $serverc == 9 ]];then
@@ -161,8 +161,8 @@ if [[ $serverc == 9 ]];then
 # Should-Stop: $network
 # Default-Start:        2 3 4 5
 # Default-Stop:         0 1 6
-# Short-Description: SSR-Bash-Python
-# Description: SSR-Bash-Python
+# Short-Description: express
+# Description: express
 ### END INIT INFO
 iptables-restore < /etc/iptables.up.rules
 bash /usr/local/shadowsocksr/logrun.sh
@@ -184,6 +184,6 @@ bash /usr/local/shadowsocksr/logrun.sh
 	fi
 	echo "开机启动设置完成！"
         echo ""
-	bash /usr/local/SSR-Bash-Python/server.sh
+	bash /usr/local/express/server.sh
 fi
 
